@@ -1,0 +1,75 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<form action="register" method="post">-->
+<!--    {% csrf_token %}-->
+<!--    <input type="text" name="username" placeholder="enter the username"><br>-->
+<!--        <input type="text" name="first_name" placeholder="enter the first name"><br>-->
+<!--    <input type="text" name="last_name" placeholder="enter the last name"><br>-->
+<!--    <input type="email" name="email" placeholder="enter the username"><br>-->
+<!--    <input type="password" name="password" placeholder="enter the password"><br>-->
+<!--    <input type="password" name="password1" placeholder="confirm the password"><br>-->
+<!--    <input type="submit">-->
+
+<!--</form>-->
+<!--{% for msg in messages %}-->
+<!--<h2>{{msg}}</h2>-->
+<!--{% endfor %}-->
+<!--</body>-->
+<!--</html>-->
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>register </title>
+      <link rel="stylesheet" href="{% static 'login/style.css' %}">
+   </head>
+   <body>
+      <div class="wrapper">
+         <div class="title">
+           Registration Form
+         </div>
+         <form action="register" method="post">
+             {% csrf_token %}
+            <div class="field">
+               <input type="text" name="username">
+               <label>Username</label>
+            </div>
+             <div class="field">
+               <input type="text" name="first_name">
+               <label>First Name</label>
+            </div>
+             <div class="field">
+               <input type="text" name="last_name">
+               <label>Last Name</label>
+            </div>
+             <div class="field">
+               <input type="email" name="email">
+               <label>Email</label>
+            </div>
+             <div class="field">
+               <input type="password" name="password">
+               <label>Password</label>
+            </div>
+
+            <div class="field">
+               <input type="password" name="password1">
+               <label>Confirm Password</label>
+            </div>
+
+            <div class="field">
+               <input type="submit" value="Register">
+            </div>
+            <div class="signup-link">
+               Already a member? <a href="login">login now</a>
+            </div>
+         </form>
+      </div>
+   </body>
+</html>
